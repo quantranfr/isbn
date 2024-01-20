@@ -10,6 +10,9 @@ $(document).ready(function() {
 
     // get the search term, trim every spaces and hyphens
     var isbn = $('#search-isbn').val().trim().replace(/[\s-]/g, '');
+    if (!isbn) {
+      return;
+    }
     $.ajax({
       url: 'https://book-webapp.azurewebsites.net/isbn/' + isbn,
       type: 'GET',
