@@ -41,7 +41,7 @@ $(document).ready(function() {
 
           // append the result in a tabular format, render \n in value as <br>, escape \n
           $('#results').append(`<tr>
-            <td width="150px"><strong>${keyMap[key]}</strong></td>
+            <td width="150px" class="me-2"><strong>${keyMap[key]}</strong></td>
             <td>${value.replace('\\n', '<br>')}</td>
             <td><button class="btn btn-info copy-btn btn-sm m-1" data-clipboard-text="${value}"><i class="far fa-copy"></i></button></td></tr>`);
         });
